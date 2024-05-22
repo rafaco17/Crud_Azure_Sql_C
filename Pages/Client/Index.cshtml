@@ -1,0 +1,41 @@
+﻿@page
+@model test.Pages.Client.IndexModel
+@{
+}
+
+<br />
+<section class="section-get">
+    <h2 class="get-title">List of Clients</h2>
+    <a class="btn btn-primary btn-sm" href="/Client/create">New Client</a>
+    <table class="get-table">
+        <thead class="table_header">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Created At</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="table_body">
+            @foreach (var item in Model.ListClients)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Address</td>
+                    <td>@item.Create_at</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="/Client/edit?id=@item.Id">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Client/delete?id=@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+
