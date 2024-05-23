@@ -79,7 +79,7 @@ namespace test.Pages.Client
                 clientInfo.Address = "";
                 succesMessage = "New Client Added Correctly";
 
-                Response.Redirect("/Cliente/Index");
+                Response.Redirect("/Client/Index");
             }
             catch (Exception ex)
             {
@@ -87,7 +87,7 @@ namespace test.Pages.Client
                 return;
             }
 
-            Response.Redirect("/Cliente/Index");
+            Response.Redirect("/Client/Index");
         }
     }
 }
